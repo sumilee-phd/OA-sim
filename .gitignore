@@ -1,3 +1,6 @@
 __pycache__/
 .claude/
 *.log
+
+# 디자인 점검 캡처(커밋 안 함)
+_review/

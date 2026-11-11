@@ -12,7 +12,7 @@
   }
   function blank(scale, text) {
     const p = page(scale);
-    p.appendChild(h('div', { style: { position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', color: '#aaa', fontSize: Math.max(10, 6 * scale * 2) + 'px' } }, text || ''));
+    p.appendChild(h('div', { style: { position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', color: '#4D4D4D', fontSize: Math.max(10, 6 * scale * 2) + 'px' } }, text || ''));
     return p;
   }
   function handMarks(p, scale, key) {

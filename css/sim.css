@@ -15,24 +15,8 @@ html, body { margin: 0; height: 100%; }
 body { font-family: var(--ui); font-size: 12px; color: var(--ink); background: var(--bg); overflow: hidden; }
 button, input, select, textarea { font-family: inherit; font-size: inherit; color: inherit; }
 [hidden] { display: none !important; }
-.small-warn { display: none; }
-@media (max-width: 1000px) { .small-warn { display: block; position: fixed; inset: auto 0 0 0; background: #fff4ce; padding: 8px 16px; z-index: 9999; border-top: 1px solid #c8a400; } }
 
 /* ---------------- 홈 */
-.home { height: 100%; overflow: auto; background: #f4f7fa; }
-.home-top { display: flex; align-items: center; gap: 12px; padding: 14px max(16px, calc((100vw - 1160px) / 2)); background: #fff; border-bottom: 1px solid #d9e2ea; }
-.home-mark { width: 40px; height: 40px; border-radius: 8px; background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 13px; }
-.home-top h1 { font-size: 18px; margin: 0; }
-.home-top small { color: #5b6876; font-size: 12.5px; display: block; }
-.home-body { max-width: 1160px; margin: 0 auto; padding: 20px 16px 40px; }
-.home-body h2 { font-size: 15px; margin: 22px 0 10px; }
-.home-note { background: #fff; border: 1px solid #d9e2ea; border-radius: 8px; padding: 12px 14px; line-height: 1.7; color: #33404d; }
-.set-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px; }
-.set-card { background: #fff; border: 1px solid #d9e2ea; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 8px; }
-.set-card h3 { margin: 0; font-size: 15px; }
-.set-card .sub { color: #5b6876; }
-.set-card .row { display: flex; flex-wrap: wrap; gap: 6px; }
-.set-card .meta { color: #5b6876; font-size: 11.5px; }
 .btn { border: 1px solid #b9c6d2; background: #fff; border-radius: 4px; padding: 6px 10px; cursor: pointer; min-height: 30px; }
 .btn:hover { background: #eef4f9; }
 .btn.primary { background: var(--brand); color: #fff; border-color: var(--brand); }
@@ -42,14 +26,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
 .chip.xl { background: #e3f1e9; color: var(--xl2); } .chip.ac { background: #f6e6e6; color: var(--ac2); } .chip.pp { background: #fbe9e3; color: var(--pp2); }
 
 /* ---------------- 세션 셸 */
-.session { display: grid; grid-template-rows: 34px 1fr 30px; height: 100%; }
-.topbar { display: flex; align-items: center; gap: 8px; padding: 0 10px; background: #1f1f1f; color: #fff; }
-.topbar .ttl { font-weight: 700; white-space: nowrap; }
-.topbar .sp { flex: 1; }
-.topbar button { background: transparent; border: 1px solid #555; color: #fff; border-radius: 3px; padding: 3px 9px; cursor: pointer; }
-.topbar button:hover { background: #333; }
-.topbar button.on { background: #0f6cbd; border-color: #0f6cbd; }
-.topbar .timer { font-variant-numeric: tabular-nums; padding: 2px 8px; border-radius: 3px; background: #333; }
+.session { display: grid; grid-template-rows: 48px 1fr 34px; height: 100%; }
 .workarea { position: relative; display: flex; min-height: 0; }
 .apps { position: relative; flex: 1; min-width: 0; }
 .appwin { position: absolute; inset: 0; display: flex; flex-direction: column; background: var(--bg); }
@@ -62,25 +39,6 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
 .taskbar .msg { margin-left: auto; color: #bbb; display: flex; align-items: center; padding-right: 6px; }
 
 /* 지시문 창 */
-.taskpanel { width: 420px; max-width: 45vw; background: #fff; border-right: 1px solid var(--line); display: flex; flex-direction: column; min-height: 0; }
-.taskpanel.right { border-right: 0; border-left: 1px solid var(--line); order: 2; }
-.tp-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--line); background: #faf9f8; }
-.tp-tabs button { border: 0; background: transparent; padding: 8px 12px; cursor: pointer; border-bottom: 2px solid transparent; }
-.tp-tabs button.on { border-bottom-color: var(--brand); font-weight: 700; }
-.tp-body { overflow: auto; padding: 10px 12px 30px; line-height: 1.6; font-size: 12.5px; }
-.tp-body h4 { margin: 14px 0 6px; font-size: 13px; }
-.tp-body p { margin: 6px 0; }
-.tp-body table { border-collapse: collapse; width: 100%; margin: 4px 0 10px; font-size: 12px; }
-.tp-body th, .tp-body td { border: 1px solid #d0d7de; padding: 3px 5px; vertical-align: top; }
-.tp-body th { background: #f1f4f7; }
-.tp-body .cap { font-weight: 700; color: #0b5e96; margin-top: 10px; }
-.tp-body .box { border: 1px solid #d9e2ea; border-left: 3px solid var(--burg); background: #fbf7f8; padding: 6px 8px; margin: 8px 0; }
-.tp-body .box b { display: block; margin-bottom: 2px; }
-.tp-body ol { padding-left: 22px; margin: 4px 0 10px; }
-.tp-body li { margin: 3px 0; }
-.tp-body .chk li { list-style: none; margin-left: -18px; }
-.tp-body .chk input { margin-right: 6px; }
-.tp-body img { max-width: 100%; border: 1px solid #ccc; display: block; margin: 6px 0; }
 
 /* ---------------- Office 창 */
 .titlebar { height: 32px; display: flex; align-items: center; background: var(--app); color: #fff; padding: 0 8px; gap: 6px; flex: none; }
@@ -424,19 +382,8 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
 .hm-slot { position: absolute; border: 1px dashed #aaa; background: #f6f6f6; }
 
 /* 5매 미리 보기·채점 */
-.review { position: absolute; inset: 0; background: #f4f7fa; z-index: 80; display: flex; flex-direction: column; }
-.review-h { display: flex; align-items: center; gap: 10px; padding: 10px 16px; background: #fff; border-bottom: 1px solid #d9e2ea; }
-.review-h h2 { font-size: 15px; margin: 0; flex: 1; }
-.review-b { flex: 1; overflow: auto; padding: 14px 16px 30px; }
-.sheets5 { display: flex; gap: 14px; overflow-x: auto; padding: 4px 2px 12px; }
-.sheet5 { display: flex; flex-direction: column; align-items: center; gap: 6px; flex: none; }
-.sheet5 .lab { font-weight: 700; }
-.sheet5 .st { font-size: 11px; color: #5b6876; }
-.score { display: flex; gap: 10px; align-items: center; margin: 8px 0; flex-wrap: wrap; }
-.score .n { font-size: 20px; font-weight: 800; }
 .gtable { border-collapse: collapse; width: 100%; background: #fff; font-size: 12.5px; }
 .gtable th, .gtable td { border: 1px solid #d9e2ea; padding: 5px 7px; vertical-align: top; text-align: left; }
 .gtable th { background: #f1f4f7; }
 .gtable .pass { color: #107c10; font-weight: 700; } .gtable .fail { color: #c50f1f; font-weight: 700; } .gtable .manual { color: #8a6d00; font-weight: 700; } .gtable .todo { color: #888; }
 .gtable .notes { color: #444; margin: 2px 0 0; padding-left: 16px; }
-.samples img { max-width: 100%; border: 1px solid #ccc; background: #fff; }
